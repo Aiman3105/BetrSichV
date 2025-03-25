@@ -28,6 +28,15 @@ def BetrSichV_RL(FG, AZ, PS, DN):
             Pr_Nr4 = "AM"
             Pr_Nr5 = "AM"
 
+    #akut toxisch Tabelle 8 H300, H310, H330
+    if FG==0.5 and AZ=="g":
+        if DN>25 and PS>0.5:
+            Pr_Nr4="ZÜS"
+            Pr_Nr5="ZÜS"
+        else:
+            Pr_Nr4 = "AM"
+            Pr_Nr5 = "AM"
+
     #Tabelle 9
     #H226 (max. zul Temp.<Flammpunkt + Flammpunkt<55°C), H314
     if FG==1.5 and AZ=="g":
